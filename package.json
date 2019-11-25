@@ -1,6 +1,6 @@
 {
   "name": "restify-json-client-promise",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Promisified restify json client with some extra logging",
   "main": "index.js",
   "scripts": {
