@@ -52,6 +52,7 @@ module.exports = function (opts) {
         e.code = err.code
         e.body = err.body
         e.statusCode = err.statusCode
+        return cb(e)
       }
       if (res.statusCode === 204) {
         obj = null
@@ -72,6 +73,7 @@ module.exports = function (opts) {
         e.code = err.code
         e.body = err.body
         e.statusCode = err.statusCode
+        return cb(e)
       }
       if (res.statusCode === 204) {
         obj = null
@@ -92,6 +94,7 @@ module.exports = function (opts) {
         e.code = err.code
         e.body = err.body
         e.statusCode = err.statusCode
+        return cb(e)
       }
       if (res.statusCode === 204) {
         obj = null
