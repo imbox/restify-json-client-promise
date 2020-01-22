@@ -27,7 +27,7 @@ module.exports = function (opts) {
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
           '    method: GET\n' +
-          `    response: ${inspect(err.body)}\n`
+          `    response: ${inspect(obj)}\n`
         e.code = err.code
         e.body = err.body
         e.statusCode = err.statusCode
@@ -47,8 +47,8 @@ module.exports = function (opts) {
           `${err.name}\n` +
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
-          '    method: GET\n' +
-          `    response: ${inspect(err.body)}\n`
+          '    method: POST\n' +
+          `    response: ${inspect(obj)}\n`
         e.code = err.code
         e.body = err.body
         e.statusCode = err.statusCode
@@ -68,8 +68,8 @@ module.exports = function (opts) {
           `${err.name}\n` +
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
-          '    method: GET\n' +
-          `    response: ${inspect(err.body)}\n`
+          '    method: PUT\n' +
+          `    response: ${inspect(obj)}\n`
         e.code = err.code
         e.body = err.body
         e.statusCode = err.statusCode
@@ -89,8 +89,8 @@ module.exports = function (opts) {
           `${err.name}\n` +
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
-          '    method: GET\n' +
-          `    response: ${inspect(err.body)}\n`
+          '    method: DELETE\n' +
+          `    response: ${inspect(obj)}\n`
         e.code = err.code
         e.body = err.body
         e.statusCode = err.statusCode
