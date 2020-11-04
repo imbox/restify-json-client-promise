@@ -9,7 +9,7 @@
   "author": "ImBox Sweden AB",
   "license": "ISC",
   "dependencies": {
-    "restify-clients": "^2.6.7"
+    "restify-clients": "^4.0.0"
   },
   "devDependencies": {
     "mocha": "^6.2.2",
