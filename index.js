@@ -23,7 +23,7 @@ module.exports = function (opts) {
     client.get(url, (err, req, res, obj) => {
       if (err && shouldThrow(res)) {
         e.message =
-          `${err.name}\n` +
+          `${err.name} - ${err.message}\n` +
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
           '    method: GET\n' +
@@ -44,7 +44,7 @@ module.exports = function (opts) {
     client.post(url, body, (err, req, res, obj) => {
       if (err && shouldThrow(res)) {
         e.message =
-          `${err.name}\n` +
+          `${err.name} - ${err.message}\n` +
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
           '    method: POST\n' +
@@ -65,7 +65,7 @@ module.exports = function (opts) {
     client.put(url, body, (err, req, res, obj) => {
       if (err && shouldThrow(res)) {
         e.message =
-          `${err.name}\n` +
+          `${err.name} - ${err.message}\n` +
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
           '    method: PUT\n' +
@@ -86,7 +86,7 @@ module.exports = function (opts) {
     client.del(url, (err, req, res, obj) => {
       if (err && shouldThrow(res)) {
         e.message =
-          `${err.name}\n` +
+          `${err.name} - ${err.message}\n` +
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
           '    method: DELETE\n' +
