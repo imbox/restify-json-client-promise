@@ -1,6 +1,8 @@
 const restify = require('restify-clients')
 const { promisify, inspect } = require('util')
 
+const inspect10 = (obj) => inspect(obj, { depth: 10 })
+
 module.exports = function (opts) {
   const client = restify.createJsonClient({
     requestTimeout: 10000,
@@ -27,7 +29,7 @@ module.exports = function (opts) {
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
           '    method: GET\n' +
-          `    response: ${inspect(obj)}\n`
+          `    response: ${inspect10(obj)}\n`
         e.code = err.code
         e.body = err.body
         e.statusCode = err.statusCode
@@ -48,7 +50,7 @@ module.exports = function (opts) {
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
           '    method: POST\n' +
-          `    response: ${inspect(obj)}\n`
+          `    response: ${inspect10(obj)}\n`
         e.code = err.code
         e.body = err.body
         e.statusCode = err.statusCode
@@ -69,7 +71,7 @@ module.exports = function (opts) {
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
           '    method: PUT\n' +
-          `    response: ${inspect(obj)}\n`
+          `    response: ${inspect10(obj)}\n`
         e.code = err.code
         e.body = err.body
         e.statusCode = err.statusCode
@@ -90,7 +92,7 @@ module.exports = function (opts) {
           `    statusCode: ${res && res.statusCode}\n` +
           `    url: ${req.path}\n` +
           '    method: DELETE\n' +
-          `    response: ${inspect(obj)}\n`
+          `    response: ${inspect10(obj)}\n`
         e.code = err.code
         e.body = err.body
         e.statusCode = err.statusCode
