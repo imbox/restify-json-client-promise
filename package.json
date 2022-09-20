@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Promisified restify json client with some extra logging",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "mocha test/*.spec.js"
   },
