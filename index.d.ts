@@ -1,12 +1,11 @@
 declare module 'restify-json-client-promise' {
-  interface RestifyClient {
-    get: (url: string) => RestifyClient
+  declare function _exports(opts: Record<string, any>): {
+    get: (url: string) => Promise<any>
     post: (url: string, body: Record<string, any>) => Promise<any>
-    put: (url: string, body: Record<string, any>) => Promise<any>
+    post: (url: string, body: Record<string, any>) => Promise<any>
     del: (url: string) => Promise<any>
     close: () => void
   }
 
-  type RestifyClientConstructor = (opts: Record<string, any>) => RestifyClient
-  export = RestifyClientConstructor
+  export = _exports;
 }
