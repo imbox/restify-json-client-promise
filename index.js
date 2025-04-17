@@ -5,8 +5,8 @@ const inspect10 = (obj) => inspect(obj, { depth: 10 })
 
 module.exports = function (opts) {
   const client = restify.createJsonClient({
-    requestTimeout: 10000,
-    connectTimeout: 10000,
+    requestTimeout: opts.requestTimeout || 10000,
+    connectTimeout: opts.connectTimeout || 10000,
     ...opts
   })
 
