@@ -8,7 +8,7 @@
     "test": "mocha test/*.spec.js"
   },
   "author": "ImBox Sweden AB",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "restify-clients": "imbox/restify-clients#8971667"
   },
